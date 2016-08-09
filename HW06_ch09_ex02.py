@@ -14,11 +14,36 @@
 # Imports
 
 # Body
+def count_no_e():
+	total_word_count = 0
+	words_without_e_count = 0
+	words_without_e_list = list()
+	with open("words.txt", "r") as words_file:
+		words_list = words_file.readlines()
+		for word in words_list:
+			word = word.strip()
+			total_word_count = total_word_count + 1
+			if has_no_e(word):
+				words_without_e_list.append(word)
+				words_without_e_count = words_without_e_count + 1
 
+	print_no_e(words_without_e_list, words_without_e_count, total_word_count)
+
+def has_no_e(word):
+	if "e" not in word:
+		return True
+	return False
+
+def print_no_e(words_without_e_list, words_without_e_count, total_word_count):
+	print("Words without 'e':")
+	for word in words_without_e_list:
+		print(word)
+	words_without_e_percentage = (words_without_e_count / total_word_count) * 100
+	print("The percentage of words without 'e' is: " + repr(words_without_e_percentage))
 
 ##############################################################################
 def main():
-    pass  # Call your function(s) here.
+    count_no_e()
 
 if __name__ == '__main__':
     main()

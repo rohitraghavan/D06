@@ -1,0 +1,10 @@
+8 names contain the letter 'e'. 
+The names are:
+Ankeet
+Sandeep
+Yifei
+Peter
+Sophie
+Meghana
+Shazeda
+Michelle
